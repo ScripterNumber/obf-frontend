@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lua Obfuscator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>LuaShield</h1>
+    <p>Lua VM Obfuscator</p>
+  </div>
+  <div class="editor-section">
+    <div class="panel">
+      <div class="panel-header">Input</div>
+      <textarea id="input" spellcheck="false" placeholder="Paste your Lua code here..."></textarea>
+    </div>
+    <div class="panel">
+      <div class="panel-header">Output</div>
+      <textarea id="output" spellcheck="false" readonly placeholder="Obfuscated code will appear here..."></textarea>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="obfuscateBtn">Obfuscate</button>
+    <button id="copyBtn" disabled>Copy Output</button>
+    <button id="copyUrlBtn" disabled>Copy URL</button>
+  </div>
+  <div id="status"></div>
+  <div id="urlDisplay"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
