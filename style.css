@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0f;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header p {
+  color: #888;
+  margin-top: 5px;
+}
+
+.editor-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  background: #1a1a2e;
+  padding: 10px 15px;
+  border-radius: 8px 8px 0 0;
+  font-weight: 600;
+  color: #667eea;
+  border: 1px solid #2a2a3e;
+  border-bottom: none;
+}
+
+textarea {
+  background: #12121a;
+  color: #e0e0e0;
+  border: 1px solid #2a2a3e;
+  border-radius: 0 0 8px 8px;
+  padding: 15px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  resize: none;
+  height: 400px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #667eea;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+#status {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#urlDisplay {
+  text-align: center;
+  padding: 10px;
+  word-break: break-all;
+}
+
+#urlDisplay a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.success { color: #4caf50; }
+.error { color: #f44336; }
+
+@media (max-width: 768px) {
+  .editor-section {
+    grid-template-columns: 1fr;
+  }
+}
